@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            "com.github.javafaker:javafaker:1.0.2",
+            'com.codeborne:selenide:6.19.0',
+            'org.junit.jupiter:junit-jupiter:5.10.2',
+            'com.guicedee.services:slf4j:1.2.2.1'
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
